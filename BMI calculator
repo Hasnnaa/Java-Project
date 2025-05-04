@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Hello Welcome To The BMI Calculator \n");
+        System.out.print("Please Enter Your Height : ");
+        float Height = scanner.nextFloat();
+        System.out.print("\nPlease Enter Your Weight : ");
+        float Weight = scanner.nextFloat();
+        float BMI = Weight / (Height * Height);
+        System.out.printf("\nYour BMI Is  %.2f, ", BMI);
+
+        if (BMI <= 18.5) {
+            System.out.println("And Based On The Calculated BMI You Have (Underweight)");
+        } else if (BMI >= 18.5 && BMI <= 24.9) {
+            System.out.println("And Based On The Calculated BMI You Have (Normal Weight)");
+        } else if (BMI >= 25 && BMI <= 29.9) {
+            System.out.println("And Based On The Calculated BMI You Have (Overweight)");
+        } else if (BMI >= 30) {
+            System.out.println("And Based On The Calculated BMI You Have (Obese)");
+        }
+    }
+}
