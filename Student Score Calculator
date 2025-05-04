@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Student {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Write your name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter your Math Grade: ");
+        float Math = scanner.nextFloat();
+        System.out.print("Enter your English Grade: ");
+        float English = scanner.nextFloat();
+        System.out.print("Enter your Science Grade: ");
+        float Science = scanner.nextFloat();
+        float Result = (Math + English + Science) / 3;
+        System.out.printf("Your Result is %.2f, ", Result);
+        if (Result >= 16) {
+            System.out.print("Excellent");
+        } else if (Result >= 12) {
+            System.out.print("Good");
+        } else if (Result >= 10) {
+            System.out.print("Acceptable");
+        } else {
+            System.out.print("Poor");
+        }
+    }
+}
